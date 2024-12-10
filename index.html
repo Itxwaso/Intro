@@ -11,11 +11,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
+            font-family: 'Arial', sans-serif;
             background: #121212;
-            background-size: cover;
-            background-attachment: fixed;
+            color: #e1e1e1;
+            line-height: 1.6;
             overflow-x: hidden;
         }
         .video-bg {
@@ -28,93 +27,101 @@
             z-index: -1;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
             margin: 40px auto;
             padding: 30px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 15px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1.5s ease-in-out;
             text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
         }
-        h1, h2, p {
-            color: #fff;
+        h1, h2 {
+            font-size: 2.2em;
+            color: #4cd1c0;
             text-transform: uppercase;
-            text-shadow: 0 0 8px #00ffcc, 0 0 20px #00ffcc;
-            animation: textGlow 1s ease-in-out infinite;
-            margin-bottom: 15px;
-            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #4cd1c0, 0 0 30px #4cd1c0;
+            animation: textGlow 1.5s ease-in-out infinite;
         }
         p {
-            font-size: 1em;
-            color: #ddd;
-            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #ccc;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
         .title {
-            font-size: 2em;
-            font-weight: bold;
-            color: #00ffcc;
+            font-size: 2.5em;
+            color: #fff;
+            text-transform: uppercase;
             margin-bottom: 20px;
-            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            font-weight: bold;
+            text-shadow: 0 0 15px #4cd1c0, 0 0 25px #4cd1c0;
         }
         .inline-details {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            justify-content: space-around;
+            margin-bottom: 25px;
             font-size: 1.1em;
         }
         .inline-details div {
-            width: 30%;
             text-align: center;
-            animation: textGlow 1.2s ease-in-out infinite;
+            color: #bbb;
+            transition: color 0.3s ease;
+        }
+        .inline-details div:hover {
+            color: #4cd1c0;
         }
         .place {
-            color: #ff80ff;
-        }
-        .best-friend a {
-            color: #ff80ff;
-            text-decoration: none;
-            font-weight: bold;
+            color: #8f9baf;
         }
         .section ul {
             list-style-type: none;
             padding: 0;
+            text-align: left;
+            margin-top: 20px;
         }
         .section ul li {
             background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            margin-bottom: 12px;
+            padding: 12px;
+            margin-bottom: 15px;
             border-radius: 8px;
-            text-transform: capitalize;
-            font-size: 1em;
-            color: #00ffcc;
-            box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+            font-size: 1.1em;
+            color: #4cd1c0;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .section ul li:hover {
+            background-color: #4cd1c0;
+            color: #fff;
+            transform: translateX(5px);
         }
         a {
-            color: #00ffcc;
+            color: #4cd1c0;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
         a:hover {
-            color: #ff80ff;
+            color: #fff;
         }
         img {
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-            animation: fadeIn 1.5s ease-in-out;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 15px rgba(76, 209, 192, 0.6);
+            animation: fadeIn 2s ease-in-out;
         }
         .social-links a {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin: 0 15px;
-            color: #00ffcc;
-            transition: transform 0.3s ease-in-out;
+            color: #4cd1c0;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
         .social-links a:hover {
             transform: scale(1.2);
-            color: #ff80ff;
+            color: #fff;
         }
         /* Animation Keyframes */
         @keyframes fadeIn {
@@ -122,9 +129,9 @@
             to { opacity: 1; }
         }
         @keyframes textGlow {
-            0% { text-shadow: 0 0 8px #00ffcc, 0 0 20px #00ffcc; }
-            50% { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; }
-            100% { text-shadow: 0 0 8px #00ffcc, 0 0 20px #00ffcc; }
+            0% { text-shadow: 0 0 10px #4cd1c0, 0 0 20px #4cd1c0; }
+            50% { text-shadow: 0 0 20px #4cd1c0, 0 0 40px #4cd1c0; }
+            100% { text-shadow: 0 0 10px #4cd1c0, 0 0 20px #4cd1c0; }
         }
     </style>
 </head>
@@ -136,30 +143,30 @@
     </video>
 
     <div class="container">
-        <div class="title">💻 Hery Cyber</div>
+        <div class="title">Hery Cyber</div>
 
         <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Hery Cyber - Digital Marketing Expert">
         
-        <h1><a href="https://wa.me/11234567890">Hery Cyber</a></h1>
+        <h1><a href="https://wa.me/11234567890">Digital Marketing Expert</a></h1>
 
         <div class="inline-details">
-            <div class="place">📍 Location: New York, USA</div>
+            <div class="place">📍 New York, USA</div>
             <div>🎂 Age: 28</div>
-            <div class="best-friend"><a href="https://www.instagram.com/herycyber">Best Friend: Digital Marketing</a></div>
+            <div><a href="https://www.linkedin.com/in/herycyber">💼 LinkedIn</a></div>
         </div>
 
-        <p>I'm a passionate Digital Marketing Expert with 6+ years of experience in building brands, optimizing online presence, and driving growth through innovative strategies. Let's work together to make your business shine!</p>
+        <p>With over 6 years of experience in Digital Marketing, I help brands scale, optimize their presence, and achieve real growth. Let's collaborate and take your brand to the next level.</p>
 
         <div class="section">
             <h2>Skills & Expertise</h2>
             <ul>
-                <li>SEO & SEM Strategies</li>
-                <li>Content Creation & Marketing</li>
-                <li>Social Media Management</li>
-                <li>Google Analytics Expert</li>
-                <li>Email Campaigns & Marketing Automation</li>
-                <li>Affiliate Marketing</li>
-                <li>Conversion Rate Optimization</li>
+                <li>SEO & SEM Strategy</li>
+                <li>Content Marketing</li>
+                <li>Social Media Optimization</li>
+                <li>Email Marketing & Campaigns</li>
+                <li>Google Analytics</li>
+                <li>Lead Generation</li>
+                <li>Conversion Optimization</li>
             </ul>
         </div>
 
@@ -173,7 +180,7 @@
         </div>
 
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/herycyber/">🔗 LinkedIn</a>
+            <a href="https://www.linkedin.com/in/herycyber">🔗 LinkedIn</a>
             <a href="https://twitter.com/herycyber">🐦 Twitter</a>
             <a href="https://www.instagram.com/herycyber">📸 Instagram</a>
         </div>
